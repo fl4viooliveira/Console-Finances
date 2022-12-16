@@ -95,10 +95,22 @@ var totalMonths = finances.length;
 // Log on console the result
 console.log("Total Months: " + totalMonths);
 
-// Calculate the total of profit or losses over the entire period
 // Create one variable = 0 and run a for loop to add each period amount
+var total = 0;
+
+// Calculate the total of profit or losses over the entire period
+for (var i = 0; i < finances.length; i++) {
+  total = total + finances[i][1];
+}
+
+// Show value on pound currency format
+var pounds = new Intl.NumberFormat("en-GB", {
+  style: "currency",
+  currency: "GBP",
+});
+
 // console log the result
-// console.log("Total: " + )
+console.log("Total: " + pounds.format(total));
 
 // Calculate the average using the previous results
 // Total / number of months
