@@ -87,10 +87,13 @@ var finances = [
   ["Feb-2017", 671099],
 ];
 
+console.log("Financial Analysis");
+console.log("----------------------------");
 // Get the total number of months on the array
 // with the array length we have the months number
+var totalMonths = finances.length;
 // Log on console the result
-// console.log("Total Months: " + )
+console.log("Total Months: " + totalMonths);
 
 // Calculate the total of profit or losses over the entire period
 // Create one variable = 0 and run a for loop to add each period amount
