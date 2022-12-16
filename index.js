@@ -113,6 +113,21 @@ var pounds = new Intl.NumberFormat("en-GB", {
 console.log("Total: " + pounds.format(total));
 
 // Calculate the average using the previous results
+
+var operations = 0;
+var ref = 0;
+
+for (var i = 1; i < finances.length; i++) {
+  var ref = ref + (finances[i][1] - finances[i - 1][1]);
+  operations++;
+  // console.log(ref);
+}
+
+var average = ref / operations;
+
+console.log("Average Change: " + pounds.format(average));
+
+// console.log("total: " + ref, operations);
 // Total / number of months
 // console log the result
 // console.log("Average Change: " + )
