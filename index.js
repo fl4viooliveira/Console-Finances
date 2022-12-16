@@ -86,3 +86,26 @@ var finances = [
   ["Jan-2017", 138230],
   ["Feb-2017", 671099],
 ];
+
+// Get the total number of months on the array
+// with the array length we have the months number
+// Log on console the result
+// console.log("Total Months: " + )
+
+// Calculate the total of profit or losses over the entire period
+// Create one variable = 0 and run a for loop to add each period amount
+// console log the result
+// console.log("Total: " + )
+
+// Calculate the average using the previous results
+// Total / number of months
+// console log the result
+// console.log("Average Change: " + )
+
+// Find the greatest value over the entire period
+// console log the value and month
+// console.log("Greatest Increase in Profits: " + )
+
+// Find the decrease value over the entire period
+// console log the value and month
+// console.log("Greatest Decrease in Profits: " + )
