@@ -165,3 +165,24 @@ console.log(
     pounds.format(decrease) +
     ")"
 );
+
+// DOM
+// variables
+var monthsValue = document.getElementById("months-value");
+var totalValue = document.getElementById("total");
+var averageValue = document.getElementById("average");
+
+var increaseMonth = document.getElementById("increase-month");
+var increaseValue = document.getElementById("increase-value");
+
+var decreaseMonth = document.getElementById("decrease-month");
+var decreaseValue = document.getElementById("decrease-value");
+// DOM application
+
+monthsValue.textContent = totalMonths;
+totalValue.textContent = pounds.format(total);
+averageValue.textContent = pounds.format(average);
+increaseMonth.textContent = greatest[0];
+increaseValue.textContent = pounds.format(increase);
+decreaseMonth.textContent = smallest[0];
+decreaseValue.textContent = pounds.format(decrease);
