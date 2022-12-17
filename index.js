@@ -139,8 +139,12 @@ for (var i = 1; i < finances.length; i++) {
     greatest = finances[i];
   }
   // Find the decrease value over the entire period
-  // the variable decrease will get bigger monthTrack negative variation
-  // the smallest will save the array with the largest negative variation
+  else if (monthTrack < decrease) {
+    // the variable decrease will get bigger monthTrack negative variation
+    decrease = monthTrack;
+    // the smallest will save the array with the largest negative variation
+    smallest = finances[i];
+  }
 }
 
 var average = ref / operations;
