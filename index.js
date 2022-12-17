@@ -125,7 +125,7 @@ var smallest = finances[0];
 // track what the total change in profits are from month to month and then find the average.
 for (var i = 1; i < finances.length; i++) {
   // logic to sum the variations between month and preview month.
-  var ref = ref + (finances[i][1] - finances[i - 1][1]);
+  ref = ref + (finances[i][1] - finances[i - 1][1]);
   // to calculate how many times the loop was executed.
   operations++;
   // isolate the value of the difference between month and preview month.
