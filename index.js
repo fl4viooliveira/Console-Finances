@@ -112,30 +112,52 @@ var pounds = new Intl.NumberFormat("en-GB", {
 // console log the result
 console.log("Total: " + pounds.format(total));
 
-// Calculate the average using the previous results
+// Calculate the of the changes in Profit/Losses over the entire period.
 
 var operations = 0;
 var ref = 0;
+var monthTrack = 0;
+var increase = 0;
+var greatest = finances[0];
+var decrease = 0;
+var smallest = finances[0];
 
+// track what the total change in profits are from month to month and then find the average.
 for (var i = 1; i < finances.length; i++) {
+  // logic to sum the variations between month and preview month.
   var ref = ref + (finances[i][1] - finances[i - 1][1]);
+  // to calculate how many times the loop was executed.
   operations++;
-  // console.log(ref);
+  // isolate the value of the difference between month and preview month.
+  monthTrack = finances[i][1] - finances[i - 1][1];
+
+  // Find the greatest value over the entire period
+  if (monthTrack > increase) {
+    // the variable increase will get bigger monthTrack variation
+    increase = monthTrack;
+    // the greatest will save the array with the bigger variation
+    greatest = finances[i];
+  }
+  // Find the decrease value over the entire period
+  // the variable decrease will get bigger monthTrack negative variation
+  // the smallest will save the array with the largest negative variation
 }
 
 var average = ref / operations;
-
 console.log("Average Change: " + pounds.format(average));
 
-// console.log("total: " + ref, operations);
-// Total / number of months
-// console log the result
-// console.log("Average Change: " + )
+console.log(
+  "Greatest Increase in Profits: " +
+    greatest[0] +
+    " (" +
+    pounds.format(increase) +
+    ")"
+);
 
-// Find the greatest value over the entire period
-// console log the value and month
-// console.log("Greatest Increase in Profits: " + )
-
-// Find the decrease value over the entire period
-// console log the value and month
-// console.log("Greatest Decrease in Profits: " + )
+console.log(
+  "Greatest Decrease in Profits: " +
+    smallest[0] +
+    " (" +
+    pounds.format(decrease) +
+    ")"
+);
