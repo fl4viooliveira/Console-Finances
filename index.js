@@ -165,3 +165,17 @@ console.log(
     pounds.format(decrease) +
     ")"
 );
+
+// DOM
+// variables
+var cardHead = document.getElementById("analysis");
+
+var months = document.getElementById("months");
+var monthsValue = document.getElementById("months-value");
+
+// DOM application
+
+cardHead.append(document.createTextNode("Financial Analysis"));
+
+// months.append(document.createTextNode("Total Months:"));
+monthsValue.append(document.createTextNode(totalMonths));
