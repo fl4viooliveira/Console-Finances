@@ -168,14 +168,21 @@ console.log(
 
 // DOM
 // variables
-var cardHead = document.getElementById("analysis");
-
-var months = document.getElementById("months");
 var monthsValue = document.getElementById("months-value");
+var totalValue = document.getElementById("total");
+var averageValue = document.getElementById("average");
 
+var increaseMonth = document.getElementById("increase-month");
+var increaseValue = document.getElementById("increase-value");
+
+var decreaseMonth = document.getElementById("decrease-month");
+var decreaseValue = document.getElementById("decrease-value");
 // DOM application
 
-cardHead.append(document.createTextNode("Financial Analysis"));
-
-// months.append(document.createTextNode("Total Months:"));
-monthsValue.append(document.createTextNode(totalMonths));
+monthsValue.textContent = totalMonths;
+totalValue.textContent = pounds.format(total);
+averageValue.textContent = pounds.format(average);
+increaseMonth.textContent = greatest[0];
+increaseValue.textContent = pounds.format(increase);
+decreaseMonth.textContent = smallest[0];
+decreaseValue.textContent = pounds.format(decrease);
